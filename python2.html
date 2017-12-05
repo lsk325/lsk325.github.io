@@ -4,10 +4,49 @@ title: Python - Django
 description: view 코딩
 background: '/img/bg-about.jpg'
 ---
+<style>
+    body{
+        font-size: 11pt;
+    }
+    .p1{
+        font-size: 12pt;
+        color: #0066ff;
+    }
+</style>
+<h1>URLconf 설정하며 어려웠던 부분.</h1>
+<p class="p1">*** url 관리를 2개의 urls.py로 나눠서 관리한다. ***</p>
+<p>
+    처음 URLconf를 코딩할때 <br/>
+    urlpatterns = <span style="color: red;">patterns</span>('',<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url(r'^admin/', include(admin.site.urls)),<br/>
+    )<br/>
+    <br/><br/>
+    이런식으로 되어있었는데, url오류가 자꾸 발생함. 왜그런지 찾아보니 <span style="color: red;">patterns</span>는 예전버전에서 사용. (내장함수호출로 python 3 에서도 사용가능)<br/>
+    python 3 에서는<span style="color: red;">patterns</span> 없이 사용 가능.
+</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quisquam ut perspiciatis, repudiandae nulla animi iste vel, praesentium repellendus molestias aliquid consequatur, earum rem qui error voluptates eius enim consequuntur!</p>
+<a href="/img/myblog/URL_2.jpg"><img class="img-fluid" src="/img/myblog/URL_1.jpg" alt="URL_1.jpg"></a>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex alias, earum consectetur quia natus ducimus voluptate explicabo, hic porro reprehenderit, quasi? Tenetur ipsum distinctio laboriosam perspiciatis officiis dolore, architecto id.</p>
+<p>
+    mysite&nbsp;&nbsp; --> &nbsp;&nbsp;urls.py <br/>
+    from django.conf.urls import include, url &nbsp;&nbsp; --> &nbsp;&nbsp; django 내장함수인 include와 url을 호출<br/>
+    <br/>
+    from django.contrib import admin &nbsp;&nbsp; --> &nbsp;&nbsp; django모듈에서 제공되는 인증 프레임워크 (admin페이지 접속시 편집가능한 그룹과 사용자같은 몇종류의 컨텐츠를 볼수 있음.)<br/>
+    <br/>
+    <br/>
+    url(r'^admin/', admin.site.urls) &nbsp;&nbsp; --> &nbsp;&nbsp; admin url을 지정해줌.<br/>
+    <br/>
+    url(r'', include ('polls.urls', namespace="polls")), &nbsp;&nbsp; --> &nbsp;&nbsp; polls\urls.py 파일을 포함한다는 의미.
+</p>
 
-<p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam inventore aspernatur repellendus incidunt adipisci modi voluptates recusandae iste eligendi, repudiandae corporis quod aut, optio! Explicabo quaerat unde voluptatem! Itaque, eum!</p>
-1233333
+<a href="/img/myblog/URL_2.jpg"><img class="img-fluid" src="/img/myblog/URL_2.jpg" alt="URL_2.jpg"></a>
+
+<p>
+    polls&nbsp;&nbsp; --> &nbsp;&nbsp;urls.py <br/>
+    from django.conf.urls import include, url &nbsp;&nbsp; --> &nbsp;&nbsp; django 내장함수인 include와 url을 호출<br/>
+    <br/>
+    form polls import views &nbsp;&nbsp; --> &nbsp;&nbsp; polls폴더 안에있는 views.py 를 호출<br/>
+    <br/>
+    <br/>
+    각각의 url을 호출.
+</p>
