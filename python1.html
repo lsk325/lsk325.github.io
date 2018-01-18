@@ -13,8 +13,21 @@ background: '/img/bg-about.jpg'
         font-size: 22pt; 
         color: red;
     }
-
+    .dropdown{
+        text-align: right;
+        margin-bottom: 10px;
+    }
 </style>
+<div class="dropdown">
+<button class="btn btn-success btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">첨부파일
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+        <li><a href="/downfilelist/pythonis.hwp" download>파이썬 소개(hwp)</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>
+
 <div style="width: 100%; text-align: center; display: inline-block;">
     <img src="/img/myblog/pythonlogo.jpg" alt="pythonlogo" >
 </div>
