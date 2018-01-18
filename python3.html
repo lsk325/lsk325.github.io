@@ -1,52 +1,45 @@
 ---
 layout: page
-title: Python - Django
-description: Template 설정
+title: Python의 기초
+description: 프로그래밍?
 background: '/img/bg-about.jpg'
 ---
 <style>
-    body{
-        font-size: 11pt;
+    .ts{
+        font-size: 10.5pt;
+        color: red;
+        text-decoration: underline;
     }
-    .p1{
-        font-size: 12pt;
-        color: #0066ff;
-    }
+    
 </style>
-<h1>URLconf 설정하며 어려웠던 부분.</h1>
-<p class="p1">*** url 관리를 2개의 urls.py로 나눠서 관리한다. ***</p>
-<p>
-    처음 URLconf를 코딩할때 <br/>
-    urlpatterns = <span style="color: red;">patterns</span>('',<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url(r'^admin/', include(admin.site.urls)),<br/>
-    )<br/>
-    <br/><br/>
-    이런식으로 되어있었는데, url오류가 자꾸 발생함. 왜그런지 찾아보니 <span style="color: red;">patterns</span>는 예전버전에서 사용. (내장함수호출로 python 3 에서도 사용가능)<br/>
-    python 3 에서는<span style="color: red;">patterns</span> 없이 사용 가능.
-</p>
+<h1>프로그램 & 프로그래밍 & 프로그래머?</h1>
+<br>
+<div>
+    <h3>※ 프로그램?</h3>
+    <img src="/img/myblog/program.jpg" alt="program" style="width: 100%; height: auto;">
+</div>
+<br>
+<br>
+<div style="font-size: 10pt;">
+    <h3>※ 프로그래밍?</h3>
+    <p>➥ 하나 이상의 관련된 <span class="ts">추상 알고리즘</span>을 <span class="ts">특정한 프로그래밍 언어</span>를 이용해 <span class="ts">구체적인 컴퓨터 프로그램</span>으로 구현하는 기술</p>
+    <img src="/img/myblog/programing.jpg" alt="programing" style="width: 100%; height: auto;">
+</div>
+<br>
+<br>
+<div style="font-size: 10pt;">
+    <h3>※ 프로그래머 ?</h3>
+    <p>➥ 프로그래밍 언어를 활용하여 프로그램을 만드는 사람</p>
+    <p>➥ 프로그래밍언어란? <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; - 변수와 제어문을 각자의 고유 방식으로 나타낸 것 <br>
+        ➥ 언어의 종류 ? <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; - 인터프리터 : 파이썬, 펄, 베쉬 등 <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; - 컴파일러 : C, C++, Object C, Java등 <br>
+        ➥ 언어의 선택 ? <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; - 해결하려는 문제의 특성을 파악해 가장 잘 반영하는 언어를 선택! <br>
+    </p>
+</div>
 
-<a href="/img/myblog/URL_2.jpg"><img class="img-fluid" src="/img/myblog/URL_1.jpg" alt="URL_1.jpg"></a>
+    <a href="/downfilelist/pythonbasic.hwp" download>파이썬 기초정리 다운로드(hwp)</a>
 
-<p>
-    mysite&nbsp;&nbsp; --> &nbsp;&nbsp;urls.py <br/>
-    from django.conf.urls import include, url &nbsp;&nbsp; --> &nbsp;&nbsp; django 내장함수인 include와 url을 호출<br/>
-    <br/>
-    from django.contrib import admin &nbsp;&nbsp; --> &nbsp;&nbsp; django모듈에서 제공되는 인증 프레임워크 (admin페이지 접속시 편집가능한 그룹과 사용자같은 몇종류의 컨텐츠를 볼수 있음.)<br/>
-    <br/>
-    <br/>
-    url(r'^admin/', admin.site.urls) &nbsp;&nbsp; --> &nbsp;&nbsp; admin url을 지정해줌.<br/>
-    <br/>
-    url(r'', include ('polls.urls', namespace="polls")), &nbsp;&nbsp; --> &nbsp;&nbsp; polls\urls.py 파일을 포함한다는 의미.
-</p>
-
-<a href="/img/myblog/URL_2.jpg"><img class="img-fluid" src="/img/myblog/URL_2.jpg" alt="URL_2.jpg"></a>
-
-<p>
-    polls&nbsp;&nbsp; --> &nbsp;&nbsp;urls.py <br/>
-    from django.conf.urls import include, url &nbsp;&nbsp; --> &nbsp;&nbsp; django 내장함수인 include와 url을 호출<br/>
-    <br/>
-    form polls import views &nbsp;&nbsp; --> &nbsp;&nbsp; polls폴더 안에있는 views.py 를 호출<br/>
-    <br/>
-    <br/>
-    각각의 url을 호출.
-</p>
+    
