@@ -1,0 +1,71 @@
+---
+layout: page
+title: Python 공부
+description: class 정복하자!
+background: '/img/bg-about.jpg'
+---
+<style>
+    body{
+        font-size: 12pt;
+        font-family: 'NanumGothic';
+    }
+    .mainText > p{
+        margin-left: 35px;
+    }
+    .mainText > h3{
+        margin-bottom: -20px;
+    }
+</style>
+<div class="mainText">
+    <h3>♣ 클래스? (class)</h3>
+        <p>• 변수나 함수들을 모아서 필요할 때 사용할 수 있는 집합체<br>
+           • 간단히 설명하면 <span style="color: red;">변수와 함수를 모아 넣은 것!</span><br>
+           • 클래스명은 PEP 8 Coding Convention에 가이드된 대로 각 <span style="color: red;">단어의 첫 문자를 대문자</span>로 하는
+             &nbsp;&nbsp;CapWords 방식으로 명명한다.            
+        </p>
+    <h3>♣ 메소드? (method)</h3>
+        <p> • <span style="color: red;">함수</span>와 비슷한 개념<br>
+            • 클래스에 묶여서 클래스 안에 있는 인스턴스와 관계되는 함수
+        </p>
+    <h3>♣ 인스턴스? (instance)</h3>
+        <p>• 클래스에 의해 만들어진 <span style="color: red;">객체</span><br>
+           • 인스턴스는 각자 자신의 값을 가지고 있음
+        </p>
+    <h3>♣ 프로퍼티? (Property)</h3>
+        <p>• 변수(Property)</p>
+    <h3>♣ 모델링? (modeling)</h3>
+        <p>• 클래스로 현실의 개념을 표현</p>
+</div>
+
+<a href="/img/myblog/class.jpg"><img class="img-fluid" src="/img/myblog/class.jpg" alt="class.jpg"></a>
+
+<div class="mainText">
+    <h3>♣ 문제점? (problem)</h3>
+        <p>class를 사용하여 객체를 쓰게되면 유용해보이지만.<br>
+            <span style="color: red;">하나의 class로 선언된 객체의 변수를 밖에서 마음껏 바꿀수 있다는 큰 문제</span>가 있다!
+        </p>
+        <p>이를 없애기 위해서 파이썬에서 <span style="color: red;">class 내부의 변수를 나타낼 때에는 __를 먼저 입력</span>한 후 변수를 선언하게 된다.<br>
+        그렇게 되면 이에 대한 값은 내부에서만 변경시킬 수 있고 외부에서는 접근을 할 수 없게 된다.
+        </p>
+        <p>만약, 사용자가 임의로 바꾸고 싶을 때는? <br>
+        위의 방법을 사용하지 않고 외부에서 마음껏 접근을 하게 되면 큰 문제가 발생하므로 함수를 통해서 변수를 바꿀 수 있도록 접근을 돌려서 할 필요가 있다. <br>
+        이러한 방법에 사용되는 함수가 <span style="color: red;">get과 set 함수</span>이다. 
+        </p>
+</div>
+
+<a href="/img/myblog/getset.jpg"><img class="img-fluid" src="/img/myblog/getset.jpg" alt="getset.jpg"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
